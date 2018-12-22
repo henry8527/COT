@@ -21,7 +21,7 @@ from COT import *
 
 
 parser = argparse.ArgumentParser(
-    description='PyTorch Complement Objective Training (COT) Training')
+    description='PyTorch Complement Objective Training (COT)')
 parser.add_argument('--COT', '-c', action='store_true',
                     help='Using Complement Objective Training (COT)')
 parser.add_argument('--resume', '-r', action='store_true',
