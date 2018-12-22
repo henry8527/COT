@@ -34,8 +34,6 @@ parser.add_argument('--lr', default=0.1, type=float,
                     help='initial learning rate')
 parser.add_argument('--batch-size', '-b', default=128,
                     type=int, help='mini-batch size (default: 128)')
-parser.add_argument('--start-epochs', default=0, type=int,
-                    help='manual epoch number (useful on restarts)')
 parser.add_argument('--epochs', default=200, type=int,
                     help='number of total epochs to run')
 
@@ -98,6 +96,7 @@ if args.resume:
     torch.set_rng_state(checkpoint['rng_state'])
 else:
     print('==> Building model.. (Default : PreActResNet18)')
+    start_epoch = 0
     net = PreActResNet18()
 
 result_folder = './results/'
@@ -163,11 +162,11 @@ def train(epoch):
             loss.backward()
             complement_optimizer.step()
 
-            train_loss += loss.data[0]
-            _, predicted = torch.max(outputs.data, 1)
-            total += targets.size(0)
-            correct += predicted.eq(targets.data).cpu().sum()
-            correct = correct.item()
+            # train_loss += loss.data[0]
+            # _, predicted = torch.max(outputs.data, 1)
+            # total += targets.size(0)
+            # correct += predicted.eq(targets.data).cpu().sum()
+            # correct = correct.item()
 
             # progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
             #     % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
@@ -256,7 +255,7 @@ if not os.path.exists(logname):
         logwriter.writerow(
             ['epoch', 'train loss', 'train acc', 'test loss', 'test acc'])
 
-for epoch in range(args.start_epochs, args.epochs):
+for epoch in range(start_epoch, args.epochs):
     adjust_learning_rate(optimizer, epoch)
     complement_adjust_learning_rate(complement_optimizer, epoch)
     train_loss, train_acc = train(epoch)
