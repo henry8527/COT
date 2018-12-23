@@ -30,7 +30,8 @@ The following table shows the best test errors in a 200-epoch training session. 
 | PreAct ResNet-18                |               5.46%  |               4.86%  |
 
 
-## Reference
+## Citation
+If you find this work useful in your research, please cite:
 ```bash
 @inproceedings{
 chen2018complement,
