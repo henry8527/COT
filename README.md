@@ -1,9 +1,8 @@
 # Complement Objective Training
 This repo contains demo reimplementations of the CIFAR-10 training code in PyTorch based on the following paper:
 
-> _COMPLEMENT OBJECTIVE TRAINING, ICLR 2019_
-
-> **Hao-Yun Chen**, Pei-Hsin Wang, Chun-Hao Liu, Shih-Chieh Chang, Jia-Yu Pan, Yu-Ting Chen, Wei Wei, Da-Cheng Juan. <br> <https://openreview.net/forum?id=HyM7AiA5YX>
+> _COMPLEMENT OBJECTIVE TRAINING_, ICLR 2019. <br>
+**Hao-Yun Chen**, Pei-Hsin Wang, Chun-Hao Liu, Shih-Chieh Chang, Jia-Yu Pan, Yu-Ting Chen, Wei Wei, Da-Cheng Juan. <br> <https://openreview.net/forum?id=HyM7AiA5YX>
 
 
 ## Dependencies
@@ -44,5 +43,5 @@ url={https://openreview.net/forum?id=HyM7AiA5YX},
 ```
 
 ## Acknowledgement
-The CIFAR-10 reimplementation of _mixup_ is adapted from the [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar) repository by [kuangliu](https://github.com/kuangliu).
+The CIFAR-10 reimplementation of COT is adapted from the [pytorch-cifar](https://github.com/kuangliu/pytorch-cifar) repository by [kuangliu](https://github.com/kuangliu).
 
