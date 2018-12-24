@@ -8,9 +8,8 @@ This repository contains the PyTorch implementation of Complement Objective Trai
 > _COMPLEMENT OBJECTIVE TRAINING_. <br>
 **Hao-Yun Chen**, Pei-Hsin Wang, Chun-Hao Liu, Shih-Chieh Chang, Jia-Yu Pan, Yu-Ting Chen, Wei Wei, Da-Cheng Juan. <br> <https://openreview.net/forum?id=HyM7AiA5YX>
 
-<!--## Introduction
-Learning with a primary objective, such as softmax cross entropy for classification and sequence generation, has been the norm for training deep neural networks for years. Although being a widely-adopted approach, using cross entropy as the primary objective exploits mostly the information from the ground-truth class for maximizing data likelihood, and largely ignores information from the complement (incorrect) classes. We argue that, in addition to the primary objective, training also using a complement objective that leverages information from the complement classes can be effective in improving model performance. This motivates us to study a new training paradigm that maximizes the likelihood of the ground-truth class while neutralizing the probabilities of the complement classes.
--->
+## Introduction
+Complement Objective Training is a new training paradigm that updates neural network parameters by alternating iteratively between the primary objective and the complement objective. Conventionally, training with cross entropy as the primary objective aims at maximizing the predicted probability of the ground-truth class, while we propose “complement entropy” as the complement objective for neutralizing the predicted probabilities of the complement classes. The experimental results confirm that, compared to the conventional training with just one primary objective, training also with the complement objective further improves the performance of the state-of-the-art models across all tasks.
 
 ## Dependencies
 
