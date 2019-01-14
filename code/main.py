@@ -117,7 +117,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=base_learning_rate,
                       momentum=0.9, weight_decay=args.decay)
 
-complement_criterion = ComplementCrossEntropy()
+complement_criterion = ComplementEntropy()
 complement_optimizer = optim.SGD(net.parameters(
 ), lr=complement_learning_rate, momentum=0.9, weight_decay=args.decay)
 

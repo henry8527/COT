@@ -5,13 +5,13 @@ import torch.nn.functional as F
 # For CIFAR10 we difine classes to 10
 classes = 10
 
-# Complement CrossEntropy (CCE)
+# Complement Entropy (CE)
 
 
-class ComplementCrossEntropy(nn.Module):
+class ComplementEntropy(nn.Module):
 
     def __init__(self):
-        super(ComplementCrossEntropy, self).__init__()
+        super(ComplementEntropy, self).__init__()
 
     # here we implemented step by step for corresponding to our formula
     # described in the paper
